@@ -3,6 +3,7 @@ require 'securerandom'
 require 'fileutils'
 
 set :bind, '0.0.0.0'
+set :port, 10037
 
 LOCKS_DIR = '/tmp/simple_lock'
 
