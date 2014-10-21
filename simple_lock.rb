@@ -2,6 +2,8 @@ require 'sinatra'
 require 'securerandom'
 require 'fileutils'
 
+set :bind, '0.0.0.0'
+
 LOCKS_DIR = '/tmp/simple_lock'
 
 def lock_file(name)
