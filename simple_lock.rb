@@ -22,8 +22,9 @@ get '/lock/:name'  do
 
   return '0' if File.exists?(file)
 
-  File.write(file, SecureRandom.hex)
-  return '1'
+  code = SecureRandom.hex
+  File.write(file, code)
+  return code
 end
 
 get '/unlock/:name/:code' do
